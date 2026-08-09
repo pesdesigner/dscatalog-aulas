@@ -31,12 +31,12 @@ public class ProductDTO {
     }
 
     public ProductDTO(Product entity){
-        id = entity.getId();
-        name = entity.getName();
-        description = entity.getDescription();
-        price = entity.getPrice();
-        imgUrl = entity.getImgUrl();
-        date = entity.getDate();
+        this.id = entity.getId();
+        this.name = entity.getName();
+        this.description = entity.getDescription();
+        this.price = entity.getPrice();
+        this.imgUrl = entity.getImgUrl();
+        this.date = entity.getDate();
     }
 
     public ProductDTO(Product entity, Set<Category> categories){
@@ -90,5 +90,9 @@ public class ProductDTO {
 
     public void setDate(Instant date) {
         this.date = date;
+    }
+
+    public List<CategoryDTO> getCategories() {
+        return categories;
     }
 }
